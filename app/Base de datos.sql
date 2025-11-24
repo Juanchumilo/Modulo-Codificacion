@@ -6,3 +6,4 @@ CREATE TABLE usuarios(
     nombre VARCHAR(100),
     correo VARCHAR(100)
 );
+
