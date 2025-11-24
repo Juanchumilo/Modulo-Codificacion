@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
+        <title>Listar Usuarios</title>
+    </head>
+
+
+    <body>
+        <section>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Editar</th>
+                    <th>ELIMINAR</th>
+                </tr>
+                
+                {% for u in usuarios %}
+                <tr>
+                    <td>{{ u["id"] }}</td>
+                    <td>{{ u["nombre"] }}</td>
+                    <td>{{ u["correo"] }}</td>
+                    <td><button><a href="/editar/{{ u['id'] }}">Editar</a></button></td>
+                    <td><button><a href="/eliminar/{{ u['id']}}">Eliminar</a></button></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+    </body>
+</html>

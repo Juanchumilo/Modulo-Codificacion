@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
+        <title>Index</title>
+    </head>
+
+
+    <!--Parte Central de la Pagina-->
+    <body>
+        <section>
+            <h1>Bienvenido, ¿qué desea hacer?</h1>
+            <br>
+            <br>
+            <button><a href="{{ url_for('listar') }}">Listar los Usuarios de la Base de Datos</a></button>
+            <button><a href="{{ url_for('crear') }}">Crear un Usuario para la Base de Datos</a></button>
+            <button><a href="{{ url_for('listar') }}">Editar un Usuario de la Base de Datos</a></button>
+            <button><a href="{{ url_for('listar') }}">Eliminar un Usuario de la Base de Datos</a></button>
+        </section>
+    </body>
+</html>
